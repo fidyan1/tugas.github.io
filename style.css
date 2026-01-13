@@ -1,0 +1,65 @@
+/* 
+ * styles.css
+ * 
+ * Sebagian besar styling telah dimigrasikan ke Tailwind CSS di index.html.
+ * File ini digunakan hanya untuk animasi khusus atau override yang sulit dilakukan dengan utility classes.
+ */
+
+/* Markdown Content Override for AI Chat (Tailwind Prose Plugin alternative) */
+.markdown-body ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-body ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.markdown-body p {
+    margin-bottom: 0.75rem;
+}
+
+.markdown-body pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.markdown-body code {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    font-size: 0.875em;
+}
+
+.dark .markdown-body code {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Animation Keyframes (Tailwind extend could do this, but keeping here for clarity) */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.shake-animation {
+    animation: shake 0.4s ease-in-out;
+}
